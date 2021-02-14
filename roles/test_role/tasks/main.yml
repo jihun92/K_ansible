@@ -1,0 +1,19 @@
+---
+- name: variable test
+  debug: var=TEST_VAR
+
+- name: run test.yml
+  include_tasks: test.yml
+
+- name: run test2.yml
+  include_tasks: test2.yml
+
+- name: handelr test
+  local_action: command echo "handelr test"
+  notify:
+  - test
+
+- name: handelr test2
+  local_action: command echo "handelr test2"
+  notify:
+  - test2

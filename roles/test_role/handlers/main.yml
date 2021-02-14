@@ -1,0 +1,6 @@
+---
+- name: test
+  debug: msg="test handler"
+
+- name: test2
+  debug: msg="test2 handler"
